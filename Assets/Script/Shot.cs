@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class Shot : MonoBehaviour
 {
-
-    //ゲームオブジェクトをインスペクターから参照するための変数
-    public GameObject Bullet;
+    public GameObject bullet;
 
     // Start is called before the first frame update
     void Start()
@@ -17,14 +15,9 @@ public class Shot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-
-            //弾を生成する
-            Instantiate(Bullet, transform.position, Quaternion.identity);
-
+            Instantiate(bullet, transform.position, Quaternion.identity);
         }
-
     }
 }

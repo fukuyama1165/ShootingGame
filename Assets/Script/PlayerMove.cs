@@ -13,36 +13,27 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         //プレイヤーのワールド座標を取得
         Vector3 pos = transform.position;
 
-        //右矢印キーが入力された時
-        if(Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
-            //右方向に0.01動く
-            pos.x += 0.01f;
+            pos.x += 0.1f;
         }
 
-        //左矢印キーが入力された時
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            //左方向に0.01動く
-            pos.x -= 0.01f;
+            pos.x -= 0.1f;
         }
 
-        //上矢印キーが入力された時
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            //上方向に0.01動く
-            pos.z += 0.01f;
+            pos.z += 0.1f;
         }
 
-        //下矢印キーが入力された時
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            //下方向に0.01動く
-            pos.z -= 0.01f;
+            pos.z -= 0.1f;
         }
 
         transform.position = new Vector3(pos.x, pos.y, pos.z);
